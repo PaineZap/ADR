@@ -19,7 +19,8 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # (list) Application requirements
-requirements = python3,kivy==2.2.1,discord.py,asyncio,aiohttp,charset-normalizer,idna,multidict,yarl
+# 👉 KHÓA BẢN aiohttp==3.8.6 ĐỂ KHÔNG BỊ LỖI C-API CỦA CYTHON
+requirements = python3,kivy==2.2.1,discord.py,asyncio,aiohttp==3.8.6,charset-normalizer,idna,multidict,yarl
 
 # (str) Supported orientations
 orientation = portrait
@@ -42,7 +43,7 @@ android.ndk = 25b
 # (str) Android SDK version
 android.sdk = 33
 
-# 👉 CHỈ BUILD CHO ARM64-V8A ĐỂ TRÁNH XUNG ĐỘT DUAL-ARCH (CỰC KỲ QUAN TRỌNG)
+# (str) List of architectures to build for
 android.archs = arm64-v8a
 
 [buildozer]

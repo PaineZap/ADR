@@ -12,10 +12,10 @@ package.domain = org.bot
 # (str) Source directory where the main file resides
 source.dir = .
 
-# (list) Source files to include (let it be empty if you want to include all files)
+# (list) Source files to include
 source.include_exts = py,png,jpg,kv,atlas
 
-# (str) Application versioning (BẮT BUỘC PHẢI CÓ DÒNG NÀY)
+# (str) Application versioning
 version = 0.1
 
 # (list) Application requirements
@@ -35,6 +35,12 @@ android.api = 33
 
 # (int) Minimum API your APK will support
 android.minapi = 21
+
+# (str) Android NDK version - KHÓA CỨNG VỀ 25b ĐỂ SỬA LỖI BIÊN DỊCH
+android.ndk = 25b
+
+# (str) Android SDK version
+android.sdk = 33
 
 [buildozer]
 # (int) Log level (0 = error only, 1 = info, 2 = debug)

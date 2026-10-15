@@ -22,32 +22,11 @@ jobs:
           sudo dpkg --add-architecture i386
           sudo apt-get update
           sudo apt-get install -y \
-            build-essential \
-            git \
-            ffmpeg \
-            libsdl2-dev \
-            libsdl2-image-dev \
-            libsdl2-mixer-dev \
-            libsdl2-ttf-dev \
-            libportmidi-dev \
-            libswscale-dev \
-            libavformat-dev \
-            libavcodec-dev \
-            zlib1g-dev \
-            libunwind-dev \
-            openjdk-17-jdk \
-            unzip \
-            zip \
-            autoconf \
-            libtool \
-            pkg-config \
-            libncurses5-dev \
-            libncursesw5-dev \
-            libtinfo5 \
-            cmake \
-            libffi-dev \
-            libssl-dev \
-            ant
+            build-essential git ffmpeg libsdl2-dev libsdl2-image-dev \
+            libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev \
+            libavformat-dev libavcodec-dev zlib1g-dev libunwind-dev \
+            openjdk-17-jdk unzip zip autoconf libtool pkg-config \
+            libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev ant
 
       - name: Install Buildozer and Cython
         run: |
@@ -58,7 +37,8 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         run: |
-          buildozer -v android debug
+          # Thêm lệnh này để buildozer chạy chi tiết và không bị nuốt lỗi
+          buildozer --debug android debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4

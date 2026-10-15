@@ -37,8 +37,8 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         run: |
-          # Thêm lệnh này để buildozer chạy chi tiết và không bị nuốt lỗi
-          buildozer --debug android debug
+          # 'yes |' tự động đồng ý mọi điều khoản bản quyền SDK của Google để không bị ngắt quãng
+          yes | buildozer --debug android debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4

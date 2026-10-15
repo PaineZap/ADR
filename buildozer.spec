@@ -36,11 +36,14 @@ android.api = 33
 # (int) Minimum API your APK will support
 android.minapi = 21
 
-# (str) Android NDK version - KHÓA CỨNG VỀ 25b ĐỂ SỬA LỖI BIÊN DỊCH
+# (str) Android NDK version
 android.ndk = 25b
 
 # (str) Android SDK version
 android.sdk = 33
+
+# 👉 CHỈ BUILD CHO ARM64-V8A ĐỂ TRÁNH XUNG ĐỘT DUAL-ARCH (CỰC KỲ QUAN TRỌNG)
+android.archs = arm64-v8a
 
 [buildozer]
 # (int) Log level (0 = error only, 1 = info, 2 = debug)

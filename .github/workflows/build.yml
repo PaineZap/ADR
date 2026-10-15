@@ -37,7 +37,7 @@ jobs:
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         run: |
-          # 'yes |' tự động đồng ý mọi điều khoản bản quyền SDK của Google để không bị ngắt quãng
+          # 'yes |' giúp tự động chấp nhận điều khoản bản quyền SDK/NDK
           yes | buildozer --debug android debug
 
       - name: Upload APK Artifact

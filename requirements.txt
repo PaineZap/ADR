@@ -1,0 +1,9 @@
+python3
+kivy==2.2.1
+discord.py
+asyncio
+aiohttp
+charset-normalizer
+idna
+multidict
+yarl
